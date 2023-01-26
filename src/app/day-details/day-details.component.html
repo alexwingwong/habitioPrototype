@@ -1,5 +1,32 @@
-<p>day-details works!</p>
+<div *ngIf="day" style="width:50%; margin:auto; margin-top: 30px;">
+    <h1>{{day.date.toDateString()}}</h1>
+    <label>Mood:
+        <br>
+    </label>
+    <mat-chip-listbox>
+        <mat-chip-option color="warn">Really Bad Day</mat-chip-option>
+        <mat-chip-option color="warn">Bad Day</mat-chip-option>
+        <mat-chip-option color="warn">Kinda Bad Day</mat-chip-option>
+        <mat-chip-option color="awdaw">Nuetral Day</mat-chip-option>
+        <mat-chip-option color="primary">Kinda Good Day</mat-chip-option>
+        <mat-chip-option color="primary">Good Day</mat-chip-option>
+        <mat-chip-option color="primary">Really Good Day</mat-chip-option>
+    </mat-chip-listbox>
 
-<div *ngIf="day">
-    {{day.date}}
+    <label>Mood:
+        <br>
+    </label>
+    <mat-form-field appearance="fill">
+        <mat-label>How was your day?*</mat-label>
+        <mat-select>
+            <mat-option value="1">Really Bad Day</mat-option>
+            <mat-option value="2">Bad Day</mat-option>
+            <mat-option value="3">Kinda Bad Day</mat-option>
+            <mat-option value="4">Nuetral Day</mat-option>
+            <mat-option value="5">Kinda Good Day</mat-option>
+            <mat-option value="6">Good Day</mat-option>
+            <mat-option value="7">Really Good Day</mat-option>
+        </mat-select>
+    </mat-form-field>
+
 </div>

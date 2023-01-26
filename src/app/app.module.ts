@@ -10,6 +10,11 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { DayDetailsComponent } from './day-details/day-details.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AboutComponent } from './about/about.component';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+import { MatSelectModule } from '@angular/material/select'
+
+import {MatChipsModule} from '@angular/material/chips'
 
 @NgModule({
   declarations: [
@@ -23,7 +28,11 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    MatGridListModule
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatChipsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

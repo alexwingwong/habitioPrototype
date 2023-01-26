@@ -1,8 +1,7 @@
 <div *ngIf="day" style="width:50%; margin:auto; margin-top: 30px;">
     <h1>{{day.date.toDateString()}}</h1>
-    <label>Mood:
-        <br>
-    </label>
+    <br>
+    <label>Mood:</label>
     <mat-chip-listbox>
         <mat-chip-option color="warn">Really Bad Day</mat-chip-option>
         <mat-chip-option color="warn">Bad Day</mat-chip-option>
@@ -13,20 +12,45 @@
         <mat-chip-option color="primary">Really Good Day</mat-chip-option>
     </mat-chip-listbox>
 
-    <label>Mood:
-        <br>
-    </label>
-    <mat-form-field appearance="fill">
-        <mat-label>How was your day?*</mat-label>
-        <mat-select>
-            <mat-option value="1">Really Bad Day</mat-option>
-            <mat-option value="2">Bad Day</mat-option>
-            <mat-option value="3">Kinda Bad Day</mat-option>
-            <mat-option value="4">Nuetral Day</mat-option>
-            <mat-option value="5">Kinda Good Day</mat-option>
-            <mat-option value="6">Good Day</mat-option>
-            <mat-option value="7">Really Good Day</mat-option>
-        </mat-select>
-    </mat-form-field>
+    <br>
+
+    <label>Sleep:</label>
+
+    <br>
+    <mat-chip-listbox>
+        <mat-chip-option color="warn">No Sleep</mat-chip-option>
+        <mat-chip-option color="warn">0-6 Hours</mat-chip-option>
+        <mat-chip-option color="primary">6-7 Hours</mat-chip-option>
+        <mat-chip-option color="primary">7-8 Hours</mat-chip-option>
+        <mat-chip-option color="primary">8-9</mat-chip-option>
+        <mat-chip-option color="primary">9+ Hours</mat-chip-option>
+    </mat-chip-listbox>
+
+  <!-- <mat-chip-listbox>
+        <mat-chip-option style="background-color:#540202;">Really Bad Day</mat-chip-option>
+        <mat-chip-option style="background-color:#AB3131">Bad Day</mat-chip-option>
+        <mat-chip-option style="background-color:#AB3131">Kinda Bad Day</mat-chip-option>
+        <mat-chip-option style="background-color:#EDE086">Nuetral Day</mat-chip-option>
+        <mat-chip-option style="background-color:#799163">Kinda Good Day</mat-chip-option>
+        <mat-chip-option style="background-color:#799163">Good Day</mat-chip-option>
+        <mat-chip-option style="background-color:#507B58">Really Good Day</mat-chip-option>
+    </mat-chip-listbox> -->
+
+    <br>
+
+    <label>Exercise Levels:</label>
+
+    <br>
+    <mat-chip-listbox>
+        <mat-chip-option color="warn">No Exercise</mat-chip-option>
+        <mat-chip-option color="primary">Light Exercise</mat-chip-option>
+        <mat-chip-option color="primary">Moderate Exercise</mat-chip-option>
+        <mat-chip-option color="primary">Great Exercise</mat-chip-option>
+    </mat-chip-listbox>
+
+    <br>
+
+    <button mat-raised-button>Submit</button>
+
 
 </div>

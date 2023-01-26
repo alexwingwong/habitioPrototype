@@ -1,0 +1,25 @@
+<div style="width:80%; margin:auto">
+    <mat-grid-list cols="7" rowHeight="1:1" gutterSize="2px">
+        <ng-container *ngFor="let Day of calendar">
+            <div *ngIf="Day.isDay">
+                <mat-grid-tile class="ShowDay">
+                    <!-- {{Day.dayNum}} -->
+                    <a [title]="Day.dayNum" [routerLink]="['/calendar', Day.monthIndex]">
+                        {{Day.dayNum}}
+                    </a>
+                </mat-grid-tile>
+            </div>
+            <div *ngIf="!Day.isDay">
+                <mat-grid-tile class="NotShowDay">
+                    {{Day.dayNum}}
+                </mat-grid-tile>
+            </div>
+
+        </ng-container>
+    </mat-grid-list>
+</div>
+<!-- <ng-container *ngFor="let Day of calendar">
+    <div *ngIf="Day.isDay">
+        {{Day.date}}
+    </div>
+</ng-container> -->

@@ -1,7 +1,32 @@
-.ShowDay{
-    background: green;
+.darkRed{
+    background: #540202;
 }
 
-.NotShowDay{
-    background: lightblue;
+.lightRed{
+    background: #AB3131;
+}
+
+.beige{
+    background: #EDE0A6;
+}
+
+.lightGreen{
+    background: #799163;
+}
+
+.darkGreen{
+    background: #507B58;
+}
+
+.grey{
+    background: darkgrey;
+}
+
+.grey{
+    background: grey;
+}
+
+a{
+    font-size: x-large;
+    text-decoration: none;
 }

@@ -6,6 +6,7 @@ export interface Day {
     mood: number,  // represents how user felt on x day
     sleep: number, // represents how much sleep a user got
     physicalActivity: number, // represents a users amount of physical activity gotten
+    cssClass: string,
 }
 
 export const calendar = newJanuaryFunc();
@@ -21,6 +22,7 @@ function newJanuaryFunc(): Day[] {
             mood: -1,
             sleep: -1,
             physicalActivity: -1,
+            cssClass: "grey"
         }
         janArray.push(newDay);
     }
@@ -33,6 +35,7 @@ function newJanuaryFunc(): Day[] {
             mood: -1,
             sleep: -1,
             physicalActivity: -1,
+            cssClass: "white"
         }
         janArray.push(newDay)
     }

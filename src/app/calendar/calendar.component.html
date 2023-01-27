@@ -1,17 +1,54 @@
 <div style="width:80%; margin:auto">
     <mat-grid-list cols="7" rowHeight="1:1" gutterSize="2px">
         <ng-container *ngFor="let Day of calendar">
-            <div *ngIf="Day.isDay">
-                <mat-grid-tile class="ShowDay">
-                    <!-- {{Day.dayNum}} -->
+
+            <!-- no entry yet, grey color -->
+            <div *ngIf="Day.isDay && Day.cssClass === 'grey'">
+                <mat-grid-tile class="grey">
+                    <a [title]="Day.dayNum" [routerLink]="['/calendar', Day.monthIndex]">
+                        {{Day.dayNum}}
+                    </a>
+                </mat-grid-tile>
+            </div>
+
+            <div *ngIf="Day.isDay && Day.cssClass === 'darkRed'">
+                <mat-grid-tile class="darkRed">
+                    <a [title]="Day.dayNum" [routerLink]="['/calendar', Day.monthIndex]">
+                        {{Day.dayNum}}
+                    </a>
+                </mat-grid-tile>
+            </div>
+            <div *ngIf="Day.isDay && Day.cssClass === 'lightRed'">
+                <mat-grid-tile class="lightRed">
+                    <a [title]="Day.dayNum" [routerLink]="['/calendar', Day.monthIndex]">
+                        {{Day.dayNum}}
+                    </a>
+                </mat-grid-tile>
+            </div>
+            <div *ngIf="Day.isDay && Day.cssClass === 'beige'">
+                <mat-grid-tile class="beige">
+                    <a [title]="Day.dayNum" [routerLink]="['/calendar', Day.monthIndex]">
+                        {{Day.dayNum}}
+                    </a>
+                </mat-grid-tile>
+            </div>
+            <div *ngIf="Day.isDay && Day.cssClass === 'lightGreen'">
+                <mat-grid-tile class="lightGreen">
+                    <a [title]="Day.dayNum" [routerLink]="['/calendar', Day.monthIndex]">
+                        {{Day.dayNum}}
+                    </a>
+                </mat-grid-tile>
+            </div>
+            <div *ngIf="Day.isDay && Day.cssClass === 'darkGreen'">
+                <mat-grid-tile class="darkGreen">
                     <a [title]="Day.dayNum" [routerLink]="['/calendar', Day.monthIndex]">
                         {{Day.dayNum}}
                     </a>
                 </mat-grid-tile>
             </div>
             <div *ngIf="!Day.isDay">
-                <mat-grid-tile class="NotShowDay">
-                    {{Day.dayNum}}
+                <mat-grid-tile class="white">
+                    <!-- {{Day.dayNum}} -->
                 </mat-grid-tile>
             </div>
 

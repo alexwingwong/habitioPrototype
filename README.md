@@ -1,27 +1,12 @@
-<div style="width:50%; margin: auto;">
+# HabitioPrototype
 
-    <br>
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
-    <h1>About</h1>
+## About
+This is Habit.io, a web application which strives to let its users take control of their own lives through the power of habit building. In today's world, it seems like people are losing more control of their lives and time due to rising costs, increased loneliness, and more pressure to perform. Though it feels like a struggle against an indifferent world/society, we can take control of the tiny things in our lives by building habits and discipline. These tiny decisions we make every day can have a big long term impact on our health and well-being as individuals which leads to increased well-being in our communities. By building habits, like getting sleep, limiting social media use, and going to the gym, we take back control of our lives. Let us not throw our time away, instead let us be mindful and live in the present one habit at a time.
 
-    <p>This is Habit.io, a web application which strives to let its users take control of their own lives through the
-        power of habit building. In today's world, it seems like people are losing more control of their lives and time
-        due to rising costs, increased loneliness, and more pressure to preform. Though it feels like a struggle against
-        an indifferent world/society, we can take control of the tiny things in our lives by building habits and
-        dicipline. These tiny decisions we make every day can have a big long term impact on our health and well-being
-        as individuals which leads to increased well-being in our communities. By building habits, like getting sleep,
-        limiting social media use, and going to the gym, we make take back control of our lives. Let us not throw our
-        time away, instead let us be mindful and live in the present one habit at a time.</p>
+This app is a prototype, letting users keep track of their mood, sleep, and exercise for the month of January 2023. It uses angular features such as components, services, modules, and Angular Materials for the UI. Users can click on a date, bringing them to a detailed page showing the date they clicked on. They can then track their for that day, or select a previous/future date to store data as well. They are able to click on a variety of buttons which indicate how their habitat did for the day. Clicking on the submit button will save the current month calendar to the local storage. On the main calendar page, users are able to reset the calendar and delete their local data.
 
-    <p>This app is a prototype, letting users keep track of their mood, sleep, and exercise for the month of January
-        2023. It uses angular features such as components, services, modules, and Angular Materials for the UI. Users
-        can click on a date, bringing them to a detailed page showing the date they clicked on. They can then track
-        their for that day, or select a previous/future date to store data as well. They are able to click on a variety
-        of buttons which indicate how their habbit did for the day. Clicking on the submit button will save the current
-        month calendar to the local storage. On the main calendar page, users are able to reset the calendar and delete
-        their local data.</p>
 
-    <h1>Future Plans</h1>
-
-    <p>There are to expand this app by connecting it to node.js and a database. Also allow for more months and allow users to add their own habits, and metrics for keeping these habits. These will be stored in a database and I want to build a more robust system for customization. Also wanting to add some data visualization for users to see where they are having successes and where to do better.</p>
-</div>
+## Future Plans
+There are plans to expand this app by connecting it to node.js and a database. Also allow for more months and allow users to add their own habits, and metrics for keeping these habits. These will be stored in a database and I want to build a more robust system for customization. Also wanting to add some data visualization for users to see where they are having successes and where to do better.

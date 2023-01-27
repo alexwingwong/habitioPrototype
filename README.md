@@ -1,27 +1,27 @@
-# HabitioPrototype
+<div style="width:50%; margin: auto;">
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+    <br>
 
-## Development server
+    <h1>About</h1>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+    <p>This is Habit.io, a web application which strives to let its users take control of their own lives through the
+        power of habit building. In today's world, it seems like people are losing more control of their lives and time
+        due to rising costs, increased loneliness, and more pressure to preform. Though it feels like a struggle against
+        an indifferent world/society, we can take control of the tiny things in our lives by building habits and
+        dicipline. These tiny decisions we make every day can have a big long term impact on our health and well-being
+        as individuals which leads to increased well-being in our communities. By building habits, like getting sleep,
+        limiting social media use, and going to the gym, we make take back control of our lives. Let us not throw our
+        time away, instead let us be mindful and live in the present one habit at a time.</p>
 
-## Code scaffolding
+    <p>This app is a prototype, letting users keep track of their mood, sleep, and exercise for the month of January
+        2023. It uses angular features such as components, services, modules, and Angular Materials for the UI. Users
+        can click on a date, bringing them to a detailed page showing the date they clicked on. They can then track
+        their for that day, or select a previous/future date to store data as well. They are able to click on a variety
+        of buttons which indicate how their habbit did for the day. Clicking on the submit button will save the current
+        month calendar to the local storage. On the main calendar page, users are able to reset the calendar and delete
+        their local data.</p>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    <h1>Future Plans</h1>
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    <p>There are to expand this app by connecting it to node.js and a database. Also allow for more months and allow users to add their own habits, and metrics for keeping these habits. These will be stored in a database and I want to build a more robust system for customization. Also wanting to add some data visualization for users to see where they are having successes and where to do better.</p>
+</div>

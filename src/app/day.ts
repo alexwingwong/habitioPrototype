@@ -14,6 +14,13 @@ export const calendar = newJanuaryFunc();
 function newJanuaryFunc(): Day[] {
     let janArray = [];
     for(var i = 1; i < 32; i++){
+        let x = "";
+        if(i%2){
+            x="grey"
+        }
+        else{
+            x='beige'
+        }
         let newDay = {
             isDay: true,
             dayNum: i,
@@ -22,7 +29,7 @@ function newJanuaryFunc(): Day[] {
             mood: -1,
             sleep: -1,
             physicalActivity: -1,
-            cssClass: "grey"
+            cssClass: 'grey'
         }
         janArray.push(newDay);
     }

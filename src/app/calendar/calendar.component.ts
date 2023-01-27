@@ -26,5 +26,9 @@ export class CalendarComponent implements OnInit, OnDestroy {
     this.subsciption.unsubscribe();
   }
 
+  clearCalendarAndCookies(){
+    this.calendarManager.clearCalendarAndCookies()
+    location.reload();
+  }
   
 }

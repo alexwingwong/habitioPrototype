@@ -38,8 +38,17 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
     const productIDFromRoute = Number(routeParams.get('dayIndex'))
 
 
-    this.day = calendar[productIDFromRoute];
+    this.day = this.calendarManager.getDay(productIDFromRoute);
     this.index = this.day.monthIndex;
+
+    console.log(this.day)
+    console.log(this.index)
+    console.log(calendar)
+    // this.day = this.calendarManager.getDay(this.index);
+    // if(this.day.dayNum == -1){
+    //   this.day = calendar[productIDFromRoute];
+    // }
+    // console.log(this.day)
 
     this.newDay = {
       isDay: this.day.isDay,
@@ -101,7 +110,8 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
   }
 
   setMoodChip(input: string) {
-    console.log(this.moods);
+    console.log(this.day)
+    console.log(input);
     let array = this.moods.toArray();
     switch (input) {
       case '1': array[0].selected = true; break;
@@ -111,12 +121,12 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
       case '5': array[4].selected = true; break;
       case '6': array[5].selected = true; break;
       case '7': array[6].selected = true; break;
-      default: break;
+      default: console.log("no mood logged"); break;
     }
   }
 
   setSleepChip(input: string) {
-    console.log(this.moods);
+    console.log(input);
     let array = this.moods.toArray();
     switch (input) {
       case '1': array[7].selected = true; break;
@@ -125,19 +135,19 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
       case '4': array[10].selected = true; break;
       case '5': array[11].selected = true; break;
       case '6': array[12].selected = true; break;
-      default: break;
+      default: console.log("no sleep logged"); break;
     }
   }
 
   setExerciseChip(input: string){
-    console.log(this.moods);
+    console.log(input);
     let array = this.moods.toArray();
     switch (input) {
       case '1': array[13].selected = true; break;
       case '2': array[14].selected = true; break;
       case '3': array[15].selected = true; break;
       case '4': array[16].selected = true; break;
-      default: break;
+      default: console.log("no exercise logged"); break;
     }
   }
 }

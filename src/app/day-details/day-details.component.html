@@ -1,5 +1,6 @@
 <div *ngIf="day" style="width:50%; margin:auto; margin-top: 30px;">
-    <h1>{{day.date.toDateString()}}</h1>
+    <!-- <h1>{{day.date.toDateString()}}</h1> -->
+    <h1>January, {{day.dayNum}} 2023</h1>
     <br>
     <label>Mood:</label>
     <mat-chip-listbox aria-label="moodAria">
@@ -51,6 +52,7 @@
     <br>
 
     <button mat-raised-button (click)="updateDay()">Submit</button>
+    <button mat-raised-button style="margin-left: 15px;" [routerLink]="['']">Back to home</button>
 
 
 </div>

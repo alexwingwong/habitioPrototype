@@ -6,7 +6,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CalandarManagerService {
-
   private days = new BehaviorSubject(calendar)
   publicDays = this.days.asObservable();
 

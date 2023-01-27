@@ -45,7 +45,7 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
       mood: 2,
       sleep: 2,
       physicalActivity: 2,
-      cssClass: 'darkRed'
+      cssClass: 'lightRed'
     }
     this.calendarManager.updateDay(newDay, newDay.monthIndex);
   }

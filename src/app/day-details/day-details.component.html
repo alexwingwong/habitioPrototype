@@ -2,7 +2,7 @@
     <h1>{{day.date.toDateString()}}</h1>
     <br>
     <label>Mood:</label>
-    <mat-chip-listbox>
+    <mat-chip-listbox aria-label="moodAria">
         <mat-chip-option color="warn">Really Bad Day</mat-chip-option>
         <mat-chip-option color="warn">Bad Day</mat-chip-option>
         <mat-chip-option color="warn">Kinda Bad Day</mat-chip-option>
@@ -17,7 +17,7 @@
     <label>Sleep:</label>
 
     <br>
-    <mat-chip-listbox>
+    <mat-chip-listbox aria-label="sleepAria">
         <mat-chip-option color="warn">No Sleep</mat-chip-option>
         <mat-chip-option color="warn">0-6 Hours</mat-chip-option>
         <mat-chip-option color="primary">6-7 Hours</mat-chip-option>
@@ -41,7 +41,7 @@
     <label>Exercise Levels:</label>
 
     <br>
-    <mat-chip-listbox>
+    <mat-chip-listbox aria-label="exerciseAria">
         <mat-chip-option color="warn">No Exercise</mat-chip-option>
         <mat-chip-option color="primary">Light Exercise</mat-chip-option>
         <mat-chip-option color="primary">Moderate Exercise</mat-chip-option>

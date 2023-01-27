@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, QueryList } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Day, calendar } from '../day'
@@ -6,6 +6,11 @@ import { Day, calendar } from '../day'
 import { CalandarManagerService } from '../calandar-manager.service';
 import { Subscription } from 'rxjs';
 import { defaultIfEmpty } from 'rxjs';
+import { ɵSharedStylesHost } from '@angular/platform-browser';
+import { ViewChild } from '@angular/core';
+import { MatChipOption } from '@angular/material/chips';
+import { ViewChildren } from '@angular/core';
+import { SelectMultipleControlValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-day-details',
@@ -22,6 +27,7 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
   index: number;
   subscription: Subscription;
   newDay: Day;
+  @ViewChildren(MatChipOption) moods: QueryList<MatChipOption>;
 
   constructor(private route: ActivatedRoute, private calendarManager: CalandarManagerService) {
 
@@ -30,6 +36,7 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
     const productIDFromRoute = Number(routeParams.get('dayIndex'))
+
 
     this.day = calendar[productIDFromRoute];
     this.index = this.day.monthIndex;
@@ -48,12 +55,18 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
     this.subscription = this.calendarManager.publicDays.subscribe(calendar => this.calendar = calendar);
   }
 
+  ngAfterViewInit() {
+    console.log(this.moods);
+    this.setMoodChip(this.day.mood.toString())
+    this.setSleepChip(this.day.sleep.toString())
+    this.setExerciseChip(this.day.physicalActivity.toString())
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 
   updateDay() {
-
     console.log(this.newDay)
     this.calendarManager.updateDay(this.newDay, this.newDay.monthIndex);
   }
@@ -69,6 +82,7 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
   }
 
   updateMood(event: any) {
+
     console.log("Mood:", event.source.value)
     this.newDay.mood = event.source.value;
 
@@ -84,5 +98,46 @@ export class DayDetailsComponent implements OnInit, OnDestroy {
     }
 
     console.log(this.newDay.cssClass)
+  }
+
+  setMoodChip(input: string) {
+    console.log(this.moods);
+    let array = this.moods.toArray();
+    switch (input) {
+      case '1': array[0].selected = true; break;
+      case '2': array[1].selected = true; break;
+      case '3': array[2].selected = true; break;
+      case '4': array[3].selected = true; break;
+      case '5': array[4].selected = true; break;
+      case '6': array[5].selected = true; break;
+      case '7': array[6].selected = true; break;
+      default: break;
+    }
+  }
+
+  setSleepChip(input: string) {
+    console.log(this.moods);
+    let array = this.moods.toArray();
+    switch (input) {
+      case '1': array[7].selected = true; break;
+      case '2': array[8].selected = true; break;
+      case '3': array[9].selected = true; break;
+      case '4': array[10].selected = true; break;
+      case '5': array[11].selected = true; break;
+      case '6': array[12].selected = true; break;
+      default: break;
+    }
+  }
+
+  setExerciseChip(input: string){
+    console.log(this.moods);
+    let array = this.moods.toArray();
+    switch (input) {
+      case '1': array[13].selected = true; break;
+      case '2': array[14].selected = true; break;
+      case '3': array[15].selected = true; break;
+      case '4': array[16].selected = true; break;
+      default: break;
+    }
   }
 }
